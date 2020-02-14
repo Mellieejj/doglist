@@ -8,9 +8,16 @@ export default function DogBreedImages(props) {
       <h1>Dogs {breed} Breed Images</h1>
       This page will show images of the {breed} breed.
       <div>
-        {" "}
-        {images && images.map(url => <img src={url} alt="Dog" />)}
-        {!images && "Loading..."}
+        <ul>
+          {" "}
+          {images &&
+            images.map(url => (
+              <li>
+                <img src={url} alt="Dog" />
+              </li>
+            ))}
+          {!images && "Loading..."}
+        </ul>
       </div>
       <Link to="/">Go back to the index</Link>
     </div>
